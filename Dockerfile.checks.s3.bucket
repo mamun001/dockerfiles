@@ -1,0 +1,9 @@
+
+# Python was requirement for this task. Hence the overkill of using Python image
+# Needs checks3.py file ; included in this directory
+
+FROM python
+ADD checks3.py  /usr/local/bin/checks3.py
+RUN pip3 install boto3
+ENTRYPOINT ["/usr/local/bin/python"]
+CMD ["/usr/local/bin/checks3.py"]

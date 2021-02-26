@@ -1,0 +1,8 @@
+
+# The task required Python to be used. Hence the overkill of using Python :-)
+# Needs date.py file : included in this directory
+
+FROM python
+ADD date.py  /usr/local/bin/date.py
+ENTRYPOINT ["/usr/local/bin/python"]
+CMD ["/usr/local/bin/date.py"]
